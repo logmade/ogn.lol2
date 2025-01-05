@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-06GMEF6HV2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-06GMEF6HV2');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ogn.lol | @1900ogn</title>
+    <link rel="icon" href="welcome-image.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #fff;
+        }
+        header {
+            background-color: #0c0c0c;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid red;
+        }
+        header h1 {
+            color: red;
+            margin: 0;
+        }
+        header nav button {
+            background-color: black;
+            color: red;
+            border: 2px solid red;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s, color 0.3s ease;
+        }
+        header nav button:hover {
+            background-color: red;
+            color: black;
+            transform: scale(1.1);
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 70px);
+            flex-direction: column;
+        }
+        h2 {
+            color: red;
+            text-shadow: 0 0 10px red;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-top: 50px;
+        }
+        img.logo-img {
+            width: 256px;
+            height: 256px;
+            margin-bottom: 40px;
+            margin-top: 30px;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+        }
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            background-color: #111;
+            border: 2px solid red;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+        .about-container h3 {
+            color: red;
+            text-shadow: 0 0 10px red;
+            margin: 0 0 20px;
+            font-size: 2rem;
+        }
+        .about-container p {
+            color: rgb(255, 0, 0);
+            font-size: 1.2rem;
+        }
+        .socials-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            justify-content: center;
+        }
+        .social-tile {
+            background-color: #111;
+            border: 2px solid red;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            max-width: 390px;
+        }
+        .social-tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+        }
+        .social-tile a {
+            color: red;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0c0c0c;
+            color: rgb(255, 0, 0);
+            border-top: 2px solid red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ogn.lol</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='hoa.html'">HOA</button>
+        </nav>
+    </header>
+
+    <main>
+        <img class="logo-img" src="logo.png" alt="logo">
+        <div class="about-container">
+            <h3>Welcome</h3>
+            <p>I use this site to share my projects, ususally i dox pedophiles but you might find some github repos in the future. If you want to support me check out my shop below!</p>
+        </div>
+        <div class="socials-container">
+            <div class="social-tile">
+                <a href="https://ogn.mysellauth.com" target="_blank">Shop</a>
+            </div>
+            <div class="social-tile">
+                <a href="https://discord.com/invite/8ext" target="_blank">Discord</a>
+            </div>
+            <div class="social-tile">
+                <a href="https://www.instagram.com/1900ogn" target="_blank">Instagram</a>
+            </div>
+            <div class="social-tile">
+                <a href="https://discord.com/invite/ogm" target="_blank">OGMarket</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>btw your ip is <span id="ip-address">loading...</span></p>
+    </footer>
+
+    <script>
+
+        async function fetchIp() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                document.getElementById('ip-address').textContent = data.ip;
+            } catch (error) {
+                document.getElementById('ip-address').textContent = '62.4.41.153';
+            }
+        }
+        fetchIp();
+    </script>
+</body>
+</html>

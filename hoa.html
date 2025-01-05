@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ogn.lol | @1900ogn</title>
+    <link rel="icon" href="welcome-image.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #fff;
+        }
+        header {
+            background-color: #0c0c0c;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid red;
+        }
+        header h1 {
+            color: red;
+            margin: 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+        }
+        header nav button {
+            background-color: black;
+            color: red;
+            border: 2px solid red;
+            padding: 10px 20px;
+            margin: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s, color 0.3s ease;
+        }
+        header nav button:hover {
+            background-color: red;
+            color: black;
+            transform: scale(1.1);
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 70px);
+            flex-direction: column;
+        }
+        h2 {
+            color: red;
+            text-shadow: 0 0 10px red;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-top: 50px;
+        }
+        h3.subheading {
+            color: red;
+            text-shadow: 0 0 5px red;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        .profile-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            justify-items: center;
+        }
+        .profile {
+            background-color: #111;
+            border: 1px solid red;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+        }
+        .profile:hover {
+            transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+            border-color: rgba(255, 0, 0, 0.8);
+        }
+        .profile img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .profile-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .profile h3 {
+            margin: 0 0 10px;
+            color: red;
+            text-shadow: 0 0 5px red;
+        }
+        .profile h3 a {
+            color: red;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .profile h3 a:hover {
+            color: red;
+        }
+        .profile p {
+            margin: 0;
+            color: #ddd;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0c0c0c;
+            color: rgb(255, 0, 0);
+            border-top: 2px solid red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ogn.lol</h1>
+        <nav>
+            <button id="mute-button" onclick="toggleMusic()">Mute</button>
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='hoa.html'">HOA</button>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Hall of Autism</h2>
+        <h3 class="subheading">click on an image for a link to their dox</h3>
+        <div class="profile-container">
+            <div class="profile">
+                <a href="https://doxbin.com/upload/robloxpedophiletransgroomerfulldox" target="_blank">
+                    <img src="image1.jpg" alt="Profile Image">
+                </a>
+                <div class="profile-content">
+                    <h3><a href="https://doxbin.com/upload/robloxpedophiletransgroomerfulldox" target="_blank">Tech.amelia</a></h3>
+                    <p>Formally known as Thomas, Amelia Grooms children on roblox with fake roblox drugs sex and gambling. larps being a woman to make children talk to him. ruined his life a roblox game and tried to kill himself when he saw the dox.</p>
+                </div>
+            </div>
+            <div class="profile">
+                <a href="https://doxbin.com/upload/AbsenzFrankGunderson" target="_blank">
+                    <img src="image2.jpg" alt="Profile Image">
+                </a>
+                <div class="profile-content">
+                    <h3><a href="https://doxbin.com/upload/AbsenzFrankGunderson" target="_blank">Cloud</a></h3>
+                    <p>Absenz the 23 year old man who exit scammed most of you for thousands of dollars and also offers to fly out children. server gets destroyed and hes exposed, he goes crying back to his mother Joann Gunderson, and will most likely try to come back under a new allias.</p>
+                </div>
+            </div>
+            <div class="profile">
+                <a href="https://ogn.lol" target="_blank">
+                    <img src="image3.jpg" alt="Profile Image">
+                </a>
+                <div class="profile-content">
+                    <h3><a href="https://ogn.lol" target="_blank">Coming soon..</a></h3>
+                    <p>23 year old Roblox player who likes using his E-Fame to entice children...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>btw your ip is <span id="ip-address">loading...</span></p>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="lol.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Fetch IP Address
+        async function fetchIp() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                document.getElementById('ip-address').textContent = data.ip;
+            } catch (error) {
+                document.getElementById('ip-address').textContent = 'Unable to fetch IP';
+            }
+        }
+        fetchIp();
+
+        // Music Control
+        const music = document.getElementById('background-music');
+        const muteButton = document.getElementById('mute-button');
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                muteButton.textContent = 'Mute Music';
+            } else {
+                music.pause();
+                muteButton.textContent = 'Unmute Music';
+            }
+        }
+
+        // Auto play music on load
+        window.onload = () => {
+            music.play();
+        };
+    </script>
+</body>
+</html>
