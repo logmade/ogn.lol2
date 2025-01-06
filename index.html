@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-06GMEF6HV2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-06GMEF6HV2');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06GMEF6HV2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-06GMEF6HV2');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ogn.lol | @1900ogn</title>
@@ -35,7 +34,8 @@
             color: red;
             margin: 0;
         }
-        header nav button {
+        header nav a {
+            display: inline-block;
             background-color: black;
             color: red;
             border: 2px solid red;
@@ -44,9 +44,11 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            text-decoration: none;
+            text-align: center;
             transition: background-color 0.3s ease, transform 0.2s, color 0.3s ease;
         }
-        header nav button:hover {
+        header nav a:hover {
             background-color: red;
             color: black;
             transform: scale(1.1);
@@ -115,7 +117,6 @@
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
             max-width: 390px;
         }
         .social-tile:hover {
@@ -123,6 +124,7 @@
             box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
         }
         .social-tile a {
+            display: block;
             color: red;
             text-decoration: none;
             font-size: 1.2rem;
@@ -141,8 +143,8 @@
     <header>
         <h1>ogn.lol</h1>
         <nav>
-            <button onclick="location.href='index.html'">Home</button>
-            <button onclick="location.href='hoa.html'">HOA</button>
+            <a href="index.html">Home</a>
+            <a href="hoa.html">HOA</a>
         </nav>
     </header>
 
@@ -150,7 +152,7 @@
         <img class="logo-img" src="logo.png" alt="logo">
         <div class="about-container">
             <h3>Welcome</h3>
-            <p>I use this site to share my projects, ususally i dox pedophiles but you might find some github repos in the future. If you want to support me check out my shop below!</p>
+            <p>I use this site to share my projects, usually I dox pedophiles but you might find some GitHub repos in the future. If you want to support me check out my shop below!</p>
         </div>
         <div class="socials-container">
             <div class="social-tile">
@@ -169,11 +171,10 @@
     </main>
 
     <footer>
-        <p>btw your ip is <span id="ip-address">loading...</span></p>
+        <p>btw your IP is <span id="ip-address">loading...</span></p>
     </footer>
 
     <script>
-
         async function fetchIp() {
             try {
                 const response = await fetch('https://api.ipify.org?format=json');
